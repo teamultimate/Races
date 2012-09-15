@@ -4,6 +4,7 @@ public class Main {
   
  public void onEnable()
   {
-   system.out.println("enabled");
+   System.out.println("Races 0.0.1 Enabled");
+   
   }
 }
