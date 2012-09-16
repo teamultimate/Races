@@ -13,7 +13,6 @@ public class Main extends JavaPlugin implements Listener{
  public void onEnable()
   {
     String[] spieler = this.getConfig().getString("variables.players").split(",");
-    
     for(int i = 0 ; i < spieler.length ; i++)
      {
        String rasse = this.getConfig().getString("players." + spieler[i] + ".race");
@@ -22,7 +21,6 @@ public class Main extends JavaPlugin implements Listener{
        
        rplayers.put(spieler[i], new rspieler(rasse,exp,level));
      }
-    
     System.out.println("Races 0.0.1 Enabled");
   }
  
