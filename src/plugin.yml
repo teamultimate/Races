@@ -1,0 +1,8 @@
+name: Races
+author: teamultimate
+version: 0.0.2
+website: http://bukkit.org/
+
+main: me.teamultimate.races.main
+
+commands:
