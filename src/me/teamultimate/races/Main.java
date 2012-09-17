@@ -13,6 +13,12 @@ public class Main extends JavaPlugin implements Listener{
  public void onEnable()
   {
     String[] spieler = this.getConfig().getString("variables.players").split(",");
+    new vampir(this);
+    new Ork(this);
+    new werwolf(this);
+    new elf(this);
+    new Mensch(this);
+    new Falmer(this);
     for(int i = 0 ; i < spieler.length ; i++)
      {
        String rasse = this.getConfig().getString("players." + spieler[i] + ".race");
