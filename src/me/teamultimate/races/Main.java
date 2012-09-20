@@ -13,7 +13,7 @@ public class Main extends JavaPlugin implements Listener{
  public void onEnable()
   {
     String[] spieler = this.getConfig().getString("variables.players").split(",");
-    new vampir(this);
+    new Vampir(this);
     new Ork(this);
     new Werwolf(this);
     new elf(this);
