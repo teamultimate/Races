@@ -15,7 +15,7 @@ public class Main extends JavaPlugin implements Listener{
     String[] spieler = this.getConfig().getString("variables.players").split(",");
     new vampir(this);
     new Ork(this);
-    new werwolf(this);
+    new Werwolf(this);
     new elf(this);
     new Mensch(this);
     new Falmer(this);

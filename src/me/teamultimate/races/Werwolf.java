@@ -5,9 +5,9 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
 
-public class werwolf implements Listener {
+public class Werwolf implements Listener {
 private Main plugin;
-	public werwolf(Main instance){
+	public Werwolf(Main instance){
 		this.plugin = instance;
 	    this.plugin.getServer().getPluginManager().registerEvents(this, this.plugin);
 	}
