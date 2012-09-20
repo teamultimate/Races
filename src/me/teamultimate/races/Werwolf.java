@@ -1,5 +1,6 @@
 package me.teamultimate.races;
 
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -12,8 +13,15 @@ private Main plugin;
 	    this.plugin.getServer().getPluginManager().registerEvents(this, this.plugin);
 	}
 	
-	@EventHandler(priority = EventPriority.LOW)
+	@EventHandler(priority = EventPriority.NORMAL)
 	public void onPlayerDamage(EntityDamageByEntityEvent e){
-		
+		if(e.getDamager() instanceof Player){
+			Player p = (Player) e.getDamager();
+			int random = (int) (Math.random()*100+1);
+			
+			if(random < 5){
+				e.setCancelled(true);
+			}
+		}
 	}
 }
