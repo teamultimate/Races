@@ -1,5 +1,6 @@
 package me.teamultimate.races;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
@@ -18,7 +19,6 @@ private Main plugin;
 		if(e.getDamager() instanceof Player){
 			Player p = (Player) e.getDamager();
 			int random = (int) (Math.random()*100+1);
-			
 			if(random < 5){
 				e.setCancelled(true);
 			}
