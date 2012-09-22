@@ -6,6 +6,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.entity.EntityDamageByEntityEvent;
+import org.bukkit.event.player.PlayerJoinEvent;
+import org.bukkit.potion.PotionEffectType;
 
 public class Werwolf implements Listener {
 private Main plugin;
@@ -25,7 +27,7 @@ private Main plugin;
 			 { // wenn zufallszahl unter 5 : ca 4 %
 				if(e.getEntity() instanceof Player) //Wenn der geschädigte Mensch ist...
 				 {
-					Player s = (Player) e.getEntity();//Spieler s = Geschädigter
+					Player s = (Player) e.getEntity(); //Spieler s = Geschädigter
 					
 					if(s.getHealth() > 2   &&  p.getWorld().getTime() > 14000 ) //Wenn spieler mehr als 2 (damit 3 oder höher!) Leben hat.. wir wollen ihm ja 2 abziehn ^^
 					{
@@ -34,5 +36,11 @@ private Main plugin;
 				 }
 			 }
 		}
+	}
+	
+	@EventHandler(priority = EventPriority.NORMAL)
+	public void onPlayerJoinEvent(PlayerJoinEvent e)
+	{
+
 	}
 }
