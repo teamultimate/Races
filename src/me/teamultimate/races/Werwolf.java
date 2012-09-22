@@ -19,7 +19,7 @@ private Main plugin;
 		if(e.getDamager() instanceof Player){ //Ist der Angreifer ein Spieler?
 			Player p = (Player) e.getDamager(); //Spieler p = Angreifer
 			int random = (int) (Math.random()*100+1); //Zufallszahl zwischen 1 und 100
-			if(random < 5)
+			if(random < 5 && p.getWorld().getTime() > 0)
 			 { // wenn zufallszahl unter 5 : ca 4 %
 				if(e.getEntity() instanceof Player) //Wenn der geschädigte Mensch ist...
 				 {
